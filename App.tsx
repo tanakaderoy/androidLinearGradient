@@ -6,19 +6,17 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   Dimensions,
   FlatList,
   ImageBackground,
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
 } from 'react-native';
+
 import LinearGradient from 'react-native-linear-gradient';
 const CARD_HORIZONTAL_WIDTH = Dimensions.get('window').width * 0.7;
 
