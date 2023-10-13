@@ -19,9 +19,10 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 const CARD_HORIZONTAL_WIDTH = Dimensions.get('window').width * 0.7;
+const CARD_HEIGHT = 180
 
 const images = new Array(100).fill(0).map((_, i) => ({
-  uri: `https://picsum.photos/seed/seed${i+1}/400/158`,
+  uri: `https://picsum.photos/seed/seed${i+1}/400/${CARD_HEIGHT}`,
   id: i,
 }));
 
@@ -31,7 +32,7 @@ function Tile({imageURL}: {imageURL: string}): JSX.Element {
       <View style={styles.contentContainer}>
         <ImageBackground
           source={{uri: imageURL}}
-          height={158}
+          height={CARD_HEIGHT}
           width={CARD_HORIZONTAL_WIDTH}
           style={styles.backgroundImage}>
           <LinearGradient
@@ -53,6 +54,7 @@ function App(): JSX.Element {
       <StatusBar barStyle={'light-content'} />
       <FlatList
         horizontal
+        showsHorizontalScrollIndicator={false}
         data={images}
         keyExtractor={x => x.id.toString()}
         renderItem={({item}) => <Tile imageURL={item.uri} />}
@@ -69,13 +71,13 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     width: CARD_HORIZONTAL_WIDTH,
-    height: 158,
+    height: CARD_HEIGHT,
     backgroundColor: 'rgb(28, 28, 30)',
     borderRadius: 4,
   },
   backgroundImage: {
     width: CARD_HORIZONTAL_WIDTH,
-    height: 158,
+    height: CARD_HEIGHT,
     backgroundColor: 'black',
     borderRadius: 4,
     overflow: 'hidden',
@@ -99,7 +101,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   backgroundContainer: {
-    flex: 1,
     backgroundColor: 'rgb(28,28,38)',
   },
 });
