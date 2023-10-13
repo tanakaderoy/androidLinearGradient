@@ -7,4 +7,5 @@ On iOS it is fine
 ![simulator_screenshot_6C9D28EA-2FE0-4BFE-A61B-6787B1EA9E6A](https://github.com/tanakaderoy/androidLinearGradient/assets/42681052/9a5cc86c-f5bc-4430-84c6-c9f01759ec92)
 
 on an android emulator it is fine as well
+
 <img width="532" alt="Screenshot 2023-10-13 at 12 12 25 PM" src="https://github.com/tanakaderoy/androidLinearGradient/assets/42681052/31855556-72da-44ed-8404-f91dd84df1a3">
