@@ -52,6 +52,7 @@ function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.backgroundContainer}>
       <StatusBar barStyle={'light-content'} />
+      <View style={{flex: 1}} />
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -102,6 +103,8 @@ const styles = StyleSheet.create({
   },
   backgroundContainer: {
     backgroundColor: 'rgb(28,28,38)',
+    flex: 1,
+    justifyContent: 'center',
   },
 });
 
